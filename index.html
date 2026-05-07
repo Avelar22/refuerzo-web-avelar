@@ -18,23 +18,29 @@
 
 <body>
 
-    <!-- ===== MENÚ LATERAL ===== -->
-    <!-- Este menú permite navegar entre las diferentes secciones -->
-    <aside class="sidebar">
+<!-- ===== BOTÓN PARA MOSTRAR U OCULTAR MENÚ ===== -->
+<!-- Este botón permite abrir y cerrar el menú lateral -->
+<button class="toggle-btn" onclick="toggleMenu()">
+    ☰
+</button>
 
-        <h2 class="logo">Sistemas</h2>
+<!-- ===== MENÚ LATERAL ===== -->
+<!-- Menú lateral ocultable -->
+<aside class="sidebar" id="sidebar">
 
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#concepto">Concepto</a></li>
-                <li><a href="#tipos">Tipos</a></li>
-                <li><a href="#herramientas">Herramientas</a></li>
-                <li><a href="#importancia">Importancia</a></li>
-            </ul>
-        </nav>
+    <h2 class="logo">Sistemas</h2>
 
-    </aside>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#concepto">Concepto</a></li>
+            <li><a href="#tipos">Tipos</a></li>
+            <li><a href="#herramientas">Herramientas</a></li>
+            <li><a href="#importancia">Importancia</a></li>
+        </ul>
+    </nav>
+
+</aside>
 
     <!-- ===== CONTENIDO PRINCIPAL ===== -->
     <main class="content">
@@ -141,6 +147,21 @@
         </footer>
 
     </main>
+
+    <!-- ===== JAVASCRIPT ===== -->
+<!-- Función para ocultar y mostrar el menú -->
+<script>
+
+    function toggleMenu() {
+
+        // Obtiene el menú lateral
+        const sidebar = document.getElementById("sidebar");
+
+        // Agrega o elimina la clase "hidden"
+        sidebar.classList.toggle("hidden");
+    }
+
+</script>
 
 </body>
 
