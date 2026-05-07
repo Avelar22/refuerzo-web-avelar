@@ -1,90 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+
+    <!-- Hace que la página sea adaptable a celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mantenimiento de Sistemas Informáticos</title>
 
-    <!-- Vincula el archivo CSS -->
+    <!-- Conexión con Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Conexión con CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- ===== MENÚ DE NAVEGACIÓN ===== -->
-<!-- Este menú permite moverse entre secciones de la página -->
-<nav>
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#concepto">Concepto</a></li>
-        <li><a href="#tipos">Tipos de mantenimiento</a></li>
-        <li><a href="#herramientas">Herramientas</a></li>
-        <li><a href="#importancia">Importancia</a></li>
-    </ul>
-</nav>
+    <!-- ===== MENÚ LATERAL ===== -->
+    <!-- Este menú permite navegar entre las diferentes secciones -->
+    <aside class="sidebar">
 
-<!-- ===== SECCIÓN INICIO ===== -->
-<section id="inicio">
-    <h1>Mantenimiento y Aseguramiento de Sistemas Informáticos</h1>
+        <h2 class="logo">Sistemas</h2>
 
-    <!-- Explicación general del tema -->
-    <p>
-        El mantenimiento de sistemas informáticos consiste en todas las acciones necesarias 
-        para garantizar el correcto funcionamiento de hardware y software.
-    </p>
-</section>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#concepto">Concepto</a></li>
+                <li><a href="#tipos">Tipos</a></li>
+                <li><a href="#herramientas">Herramientas</a></li>
+                <li><a href="#importancia">Importancia</a></li>
+            </ul>
+        </nav>
 
-<!-- ===== SECCIÓN CONCEPTO ===== -->
-<section id="concepto">
-    <h2>¿Qué es el mantenimiento?</h2>
+    </aside>
 
-    <!-- Explica el concepto -->
-    <p>
-        Es el conjunto de procesos técnicos que permiten prevenir fallos, corregir errores 
-        y optimizar el rendimiento de los sistemas informáticos.
-    </p>
-</section>
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main class="content">
 
-<!-- ===== SECCIÓN TIPOS ===== -->
-<section id="tipos">
-    <h2>Tipos de mantenimiento</h2>
+        <!-- ===== SECCIÓN INICIO ===== -->
+        <section id="inicio" class="container section-box">
 
-    <!-- Lista de tipos -->
-    <ul>
-        <li><strong>Preventivo:</strong> Evita fallos antes de que ocurran.</li>
-        <li><strong>Correctivo:</strong> Soluciona errores existentes.</li>
-        <li><strong>Predictivo:</strong> Anticipa fallas mediante monitoreo.</li>
-    </ul>
-</section>
+            <h1 class="mb-4">
+                Mantenimiento y Aseguramiento de la Operación de Sistemas Informáticos
+            </h1>
 
-<!-- ===== SECCIÓN HERRAMIENTAS ===== -->
-<section id="herramientas">
-    <h2>Herramientas utilizadas</h2>
+            <p>
+                El mantenimiento de sistemas informáticos consiste en una serie de procesos
+                técnicos orientados a garantizar el correcto funcionamiento de hardware,
+                software, redes y servicios tecnológicos.
+            </p>
 
-    <!-- Ejemplos de herramientas -->
-    <p>
-        Algunas herramientas importantes incluyen:
-    </p>
+        </section>
 
-    <ul>
-        <li>Software de monitoreo</li>
-        <li>Bugzilla (gestión de errores)</li>
-        <li>Registros de incidencias</li>
-    </ul>
-</section>
+        <!-- ===== SECCIÓN CONCEPTO ===== -->
+        <section id="concepto" class="container section-box">
 
-<!-- ===== SECCIÓN IMPORTANCIA ===== -->
-<section id="importancia">
-    <h2>Importancia del mantenimiento</h2>
+            <h2>¿Qué es el mantenimiento informático?</h2>
 
-    <p>
-        Permite garantizar la continuidad del servicio, evitar pérdidas de información 
-        y mejorar la eficiencia del sistema.
-    </p>
-</section>
+            <p>
+                Es el conjunto de actividades que permiten prevenir errores, corregir fallas
+                y optimizar el rendimiento de los sistemas informáticos.
+            </p>
 
-<!-- ===== PIE DE PÁGINA ===== -->
-<footer>
-    <p>Proyecto académico - 2026</p>
-</footer>
+        </section>
+
+        <!-- ===== SECCIÓN TIPOS ===== -->
+        <section id="tipos" class="container section-box">
+
+            <h2>Tipos de mantenimiento</h2>
+
+            <!-- Bootstrap Grid -->
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="card p-3 shadow">
+                        <h4>Preventivo</h4>
+                        <p>
+                            Busca evitar fallos mediante revisiones periódicas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card p-3 shadow">
+                        <h4>Correctivo</h4>
+                        <p>
+                            Corrige problemas ya existentes en el sistema.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card p-3 shadow">
+                        <h4>Predictivo</h4>
+                        <p>
+                            Detecta posibles fallas mediante monitoreo constante.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===== SECCIÓN HERRAMIENTAS ===== -->
+        <section id="herramientas" class="container section-box">
+
+            <h2>Herramientas utilizadas</h2>
+
+            <ul class="list-group">
+                <li class="list-group-item">Bugzilla</li>
+                <li class="list-group-item">Software de monitoreo</li>
+                <li class="list-group-item">Registros de incidencias</li>
+                <li class="list-group-item">Planes contingenciales</li>
+            </ul>
+
+        </section>
+
+        <!-- ===== SECCIÓN IMPORTANCIA ===== -->
+        <section id="importancia" class="container section-box">
+
+            <h2>Importancia del mantenimiento</h2>
+
+            <p>
+                El mantenimiento garantiza la continuidad operativa de los sistemas,
+                mejora la seguridad de la información y reduce riesgos de fallos críticos.
+            </p>
+
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="text-center mt-5 mb-4">
+
+            <p>
+                Proyecto Académico | Desarrollo Web 2026
+            </p>
+
+        </footer>
+
+    </main>
 
 </body>
+
 </html>
