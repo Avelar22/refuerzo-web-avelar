@@ -4,106 +4,102 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Hace que la página sea adaptable a celulares -->
+    <!-- Hace responsive la página -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mantenimiento de Sistemas Informáticos</title>
 
-    <!-- Conexión con Bootstrap -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Conexión con CSS -->
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ===== BOTÓN PARA MOSTRAR U OCULTAR MENÚ ===== -->
-<!-- Este botón permite abrir y cerrar el menú lateral -->
-<button class="toggle-btn" onclick="toggleMenu()">
-    ☰
-</button>
+    <!-- ===== BOTÓN MENÚ ===== -->
+    <!-- Este botón abre y cierra el menú lateral -->
+    <button class="menu-btn" id="menuBtn">
+        <i class="bi bi-list"></i>
+    </button>
 
-<!-- ===== MENÚ LATERAL ===== -->
-<!-- Menú lateral ocultable -->
-<aside class="sidebar" id="sidebar">
+    <!-- ===== MENÚ LATERAL ===== -->
+    <aside class="sidebar" id="sidebar">
 
-    <h2 class="logo">Sistemas</h2>
+        <h2 class="logo">Sistemas</h2>
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#concepto">Concepto</a></li>
-            <li><a href="#tipos">Tipos</a></li>
-            <li><a href="#herramientas">Herramientas</a></li>
-            <li><a href="#importancia">Importancia</a></li>
-        </ul>
-    </nav>
+        <!-- Navegación -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#concepto">Concepto</a></li>
+                <li><a href="#tipos">Tipos</a></li>
+                <li><a href="#herramientas">Herramientas</a></li>
+                <li><a href="#importancia">Importancia</a></li>
+            </ul>
+        </nav>
 
-</aside>
+    </aside>
 
-    <!-- ===== CONTENIDO PRINCIPAL ===== -->
-    <main class="content">
+    <!-- ===== CONTENIDO ===== -->
+    <main class="content" id="content">
 
-        <!-- ===== SECCIÓN INICIO ===== -->
+        <!-- INICIO -->
         <section id="inicio" class="container section-box">
 
-            <h1 class="mb-4">
+            <h1>
                 Mantenimiento y Aseguramiento de la Operación de Sistemas Informáticos
             </h1>
 
             <p>
-                El mantenimiento de sistemas informáticos consiste en una serie de procesos
-                técnicos orientados a garantizar el correcto funcionamiento de hardware,
-                software, redes y servicios tecnológicos.
+                El mantenimiento informático garantiza el correcto funcionamiento
+                de hardware, software y redes mediante procesos preventivos y correctivos.
             </p>
 
         </section>
 
-        <!-- ===== SECCIÓN CONCEPTO ===== -->
+        <!-- CONCEPTO -->
         <section id="concepto" class="container section-box">
 
-            <h2>¿Qué es el mantenimiento informático?</h2>
+            <h2>¿Qué es el mantenimiento?</h2>
 
             <p>
-                Es el conjunto de actividades que permiten prevenir errores, corregir fallas
-                y optimizar el rendimiento de los sistemas informáticos.
+                Son actividades técnicas orientadas a prevenir errores, solucionar fallos
+                y mejorar el rendimiento de los sistemas.
             </p>
 
         </section>
 
-        <!-- ===== SECCIÓN TIPOS ===== -->
+        <!-- TIPOS -->
         <section id="tipos" class="container section-box">
 
             <h2>Tipos de mantenimiento</h2>
 
-            <!-- Bootstrap Grid -->
-            <div class="row">
+            <div class="row g-4">
 
                 <div class="col-md-4">
                     <div class="card p-3 shadow">
                         <h4>Preventivo</h4>
-                        <p>
-                            Busca evitar fallos mediante revisiones periódicas.
-                        </p>
+                        <p>Evita problemas antes de que ocurran.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="card p-3 shadow">
                         <h4>Correctivo</h4>
-                        <p>
-                            Corrige problemas ya existentes en el sistema.
-                        </p>
+                        <p>Corrige errores existentes en el sistema.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="card p-3 shadow">
                         <h4>Predictivo</h4>
-                        <p>
-                            Detecta posibles fallas mediante monitoreo constante.
-                        </p>
+                        <p>Analiza posibles fallas futuras.</p>
                     </div>
                 </div>
 
@@ -111,7 +107,7 @@
 
         </section>
 
-        <!-- ===== SECCIÓN HERRAMIENTAS ===== -->
+        <!-- HERRAMIENTAS -->
         <section id="herramientas" class="container section-box">
 
             <h2>Herramientas utilizadas</h2>
@@ -125,23 +121,23 @@
 
         </section>
 
-        <!-- ===== SECCIÓN IMPORTANCIA ===== -->
+        <!-- IMPORTANCIA -->
         <section id="importancia" class="container section-box">
 
-            <h2>Importancia del mantenimiento</h2>
+            <h2>Importancia</h2>
 
             <p>
-                El mantenimiento garantiza la continuidad operativa de los sistemas,
-                mejora la seguridad de la información y reduce riesgos de fallos críticos.
+                Garantiza la continuidad operativa, mejora la seguridad
+                y reduce riesgos de pérdida de información.
             </p>
 
         </section>
 
-        <!-- ===== FOOTER ===== -->
-        <footer class="text-center mt-5 mb-4">
+        <!-- FOOTER -->
+        <footer class="text-center mt-5">
 
             <p>
-                Proyecto Académico | Desarrollo Web 2026
+                Proyecto Académico | 2026
             </p>
 
         </footer>
@@ -149,19 +145,22 @@
     </main>
 
     <!-- ===== JAVASCRIPT ===== -->
-<!-- Función para ocultar y mostrar el menú -->
-<script>
+    <script>
 
-    function toggleMenu() {
-
-        // Obtiene el menú lateral
+        // Obtiene los elementos
+        const menuBtn = document.getElementById("menuBtn");
         const sidebar = document.getElementById("sidebar");
+        const content = document.getElementById("content");
 
-        // Agrega o elimina la clase "hidden"
-        sidebar.classList.toggle("hidden");
-    }
+        // Evento para ocultar/mostrar menú
+        menuBtn.addEventListener("click", () => {
 
-</script>
+            sidebar.classList.toggle("active");
+            content.classList.toggle("active");
+
+        });
+
+    </script>
 
 </body>
 
