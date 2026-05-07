@@ -1,52 +1,103 @@
-/* ===== CONFIGURACIÓN GENERAL ===== */
+/* ========================================= */
+/* SCROLL SUAVE */
+/* ========================================= */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================= */
+/* CONFIGURACIÓN GENERAL */
+/* ========================================= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f6f9;
     overflow-x: hidden;
+    transition: 0.4s;
 }
 
-/* ===== BOTÓN MENÚ ===== */
-.menu-btn {
+/* ========================================= */
+/* DARK MODE */
+/* ========================================= */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .section-box,
+.dark-mode .custom-card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* ========================================= */
+/* BOTONES */
+/* ========================================= */
+.menu-btn,
+.dark-btn,
+#topBtn {
+
     position: fixed;
-    top: 15px;
-    left: 15px;
     z-index: 1001;
     border: none;
     background-color: #1f2937;
     color: white;
     padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 22px;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 20px;
+
 }
 
-/* ===== MENÚ LATERAL ===== */
+.menu-btn {
+    top: 15px;
+    left: 15px;
+}
+
+.dark-btn {
+    top: 15px;
+    right: 15px;
+}
+
+#topBtn {
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+/* ========================================= */
+/* MENÚ LATERAL */
+/* ========================================= */
 .sidebar {
+
     position: fixed;
     top: 0;
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #1f2937;
+    background-color: #111827;
     transition: 0.4s;
-    padding-top: 70px;
     z-index: 1000;
+    padding-top: 70px;
+
 }
 
-/* ===== MENÚ ACTIVO ===== */
 .sidebar.active {
     left: 0;
 }
 
-/* ===== LOGO ===== */
+/* ========================================= */
+/* LOGO */
+/* ========================================= */
 .logo {
     color: white;
     text-align: center;
     margin-bottom: 30px;
 }
 
-/* ===== MENÚ ===== */
+/* ========================================= */
+/* MENÚ */
+/* ========================================= */
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -57,66 +108,120 @@ body {
 }
 
 .sidebar ul li a {
+
     text-decoration: none;
     color: white;
     display: block;
     transition: 0.3s;
+
 }
 
-/* ===== EFECTO HOVER ===== */
 .sidebar ul li a:hover {
+
     background-color: #374151;
-    border-radius: 5px;
+    border-radius: 8px;
     padding-left: 10px;
+
 }
 
-/* ===== CONTENIDO ===== */
+/* ========================================= */
+/* CONTENIDO */
+/* ========================================= */
 .content {
+
     width: 100%;
-    padding: 80px 20px;
+    padding: 0;
     transition: 0.4s;
+
 }
 
-/* ===== CUANDO EL MENÚ ESTÁ ABIERTO ===== */
 .content.active {
     margin-left: 250px;
 }
 
-/* ===== CAJAS ===== */
+/* ========================================= */
+/* HERO SECTION */
+/* ========================================= */
+.hero-section {
+
+    height: 100vh;
+
+    background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-overlay {
+
+    background-color: rgba(0,0,0,0.6);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    width: 80%;
+
+}
+
+/* ========================================= */
+/* SECCIONES */
+/* ========================================= */
 .section-box {
+
     background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+
 }
 
-/* ===== TÍTULOS ===== */
-h1,
-h2 {
-    color: #1f2937;
-}
+/* ========================================= */
+/* TARJETAS */
+/* ========================================= */
+.custom-card {
 
-/* ===== TARJETAS ===== */
-.card {
     border: none;
-    border-radius: 12px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+
 }
 
-/* ===== FOOTER ===== */
+.custom-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
 footer {
-    color: #666;
+    color: gray;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
 @media (max-width: 768px) {
+
+    .hero-overlay {
+        width: 95%;
+        padding: 30px;
+    }
 
     .content.active {
         margin-left: 0;
     }
 
-    .sidebar {
-        width: 220px;
+    .section-box {
+        padding: 25px;
     }
 
 }

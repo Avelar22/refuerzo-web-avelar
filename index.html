@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Hace responsive la página -->
+    <!-- Responsive para móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mantenimiento de Sistemas Informáticos</title>
@@ -16,90 +16,216 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- AOS Animaciones -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <!-- ===== BOTÓN MENÚ ===== -->
-    <!-- Este botón abre y cierra el menú lateral -->
+    <!-- ========================================= -->
+    <!-- BOTÓN PARA ABRIR Y CERRAR MENÚ -->
+    <!-- ========================================= -->
     <button class="menu-btn" id="menuBtn">
         <i class="bi bi-list"></i>
     </button>
 
-    <!-- ===== MENÚ LATERAL ===== -->
+    <!-- ========================================= -->
+    <!-- BOTÓN DARK MODE -->
+    <!-- Cambia entre modo claro y oscuro -->
+    <!-- ========================================= -->
+    <button class="dark-btn" id="darkBtn">
+        <i class="bi bi-moon-fill"></i>
+    </button>
+
+    <!-- ========================================= -->
+    <!-- MENÚ LATERAL -->
+    <!-- Permite navegar entre secciones -->
+    <!-- ========================================= -->
     <aside class="sidebar" id="sidebar">
 
         <h2 class="logo">Sistemas</h2>
 
-        <!-- Navegación -->
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#concepto">Concepto</a></li>
                 <li><a href="#tipos">Tipos</a></li>
                 <li><a href="#herramientas">Herramientas</a></li>
+                <li><a href="#seguridad">Seguridad</a></li>
                 <li><a href="#importancia">Importancia</a></li>
             </ul>
         </nav>
 
     </aside>
 
-    <!-- ===== CONTENIDO ===== -->
+    <!-- ========================================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ========================================= -->
     <main class="content" id="content">
 
-        <!-- INICIO -->
-        <section id="inicio" class="container section-box">
+        <!-- ========================================= -->
+        <!-- HERO SECTION -->
+        <!-- Sección principal de bienvenida -->
+        <!-- ========================================= -->
+        <section id="inicio" class="hero-section" data-aos="fade-up">
 
-            <h1>
-                Mantenimiento y Aseguramiento de la Operación de Sistemas Informáticos
-            </h1>
+            <div class="hero-overlay">
 
-            <p>
-                El mantenimiento informático garantiza el correcto funcionamiento
-                de hardware, software y redes mediante procesos preventivos y correctivos.
-            </p>
+                <h1>
+                    Mantenimiento y Aseguramiento de la Operación de Sistemas Informáticos
+                </h1>
+
+                <p>
+                    Garantizando el correcto funcionamiento, seguridad y estabilidad
+                    de los sistemas tecnológicos.
+                </p>
+
+                <a href="#concepto" class="btn btn-primary btn-lg mt-3">
+                    Ver información
+                </a>
+
+            </div>
 
         </section>
 
+        <!-- ========================================= -->
         <!-- CONCEPTO -->
-        <section id="concepto" class="container section-box">
+        <!-- Explica qué es el mantenimiento -->
+        <!-- ========================================= -->
+        <section id="concepto" class="container section-box" data-aos="fade-right">
 
-            <h2>¿Qué es el mantenimiento?</h2>
+            <h2>
+                <i class="bi bi-pc-display"></i>
+                ¿Qué es el mantenimiento?
+            </h2>
 
             <p>
-                Son actividades técnicas orientadas a prevenir errores, solucionar fallos
-                y mejorar el rendimiento de los sistemas.
+                El mantenimiento informático consiste en un conjunto de procesos
+                técnicos destinados a prevenir errores, optimizar recursos,
+                mejorar el rendimiento y garantizar el funcionamiento continuo
+                de hardware, software y redes.
             </p>
+
+            <!-- Imagen ilustrativa -->
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
+                class="img-fluid rounded mt-3" alt="Sistemas">
 
         </section>
 
-        <!-- TIPOS -->
-        <section id="tipos" class="container section-box">
+        <!-- ========================================= -->
+        <!-- TIPOS DE MANTENIMIENTO -->
+        <!-- Tarjetas informativas -->
+        <!-- ========================================= -->
+        <section id="tipos" class="container section-box" data-aos="fade-up">
 
-            <h2>Tipos de mantenimiento</h2>
+            <h2>
+                <i class="bi bi-tools"></i>
+                Tipos de mantenimiento
+            </h2>
 
-            <div class="row g-4">
+            <div class="row g-4 mt-3">
 
                 <div class="col-md-4">
-                    <div class="card p-3 shadow">
-                        <h4>Preventivo</h4>
-                        <p>Evita problemas antes de que ocurran.</p>
+
+                    <div class="card custom-card">
+
+                        <div class="card-body">
+
+                            <h4>Preventivo</h4>
+
+                            <p>
+                                Busca evitar fallas antes de que ocurran mediante
+                                revisiones periódicas y monitoreo constante.
+                            </p>
+
+                        </div>
+
                     </div>
+
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card p-3 shadow">
-                        <h4>Correctivo</h4>
-                        <p>Corrige errores existentes en el sistema.</p>
+
+                    <div class="card custom-card">
+
+                        <div class="card-body">
+
+                            <h4>Correctivo</h4>
+
+                            <p>
+                                Corrige errores o daños ya presentes en los sistemas.
+                            </p>
+
+                        </div>
+
                     </div>
+
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card p-3 shadow">
-                        <h4>Predictivo</h4>
-                        <p>Analiza posibles fallas futuras.</p>
+
+                    <div class="card custom-card">
+
+                        <div class="card-body">
+
+                            <h4>Predictivo</h4>
+
+                            <p>
+                                Permite detectar posibles fallos futuros mediante análisis.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- HERRAMIENTAS -->
+        <!-- Herramientas reales utilizadas -->
+        <!-- ========================================= -->
+        <section id="herramientas" class="container section-box" data-aos="fade-left">
+
+            <h2>
+                <i class="bi bi-wrench-adjustable"></i>
+                Herramientas utilizadas
+            </h2>
+
+            <div class="row g-4 mt-3">
+
+                <div class="col-md-3">
+                    <div class="card custom-card p-3">
+                        <h5>Bugzilla</h5>
+                        <p>Gestión de errores e incidencias.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card custom-card p-3">
+                        <h5>Zabbix</h5>
+                        <p>Monitoreo de redes y servidores.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card custom-card p-3">
+                        <h5>Nagios</h5>
+                        <p>Supervisión de infraestructura tecnológica.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card custom-card p-3">
+                        <h5>Jira</h5>
+                        <p>Administración y seguimiento de proyectos.</p>
                     </div>
                 </div>
 
@@ -107,56 +233,116 @@
 
         </section>
 
-        <!-- HERRAMIENTAS -->
-        <section id="herramientas" class="container section-box">
+        <!-- ========================================= -->
+        <!-- SEGURIDAD INFORMÁTICA -->
+        <!-- Explica la protección de sistemas -->
+        <!-- ========================================= -->
+        <section id="seguridad" class="container section-box" data-aos="zoom-in">
 
-            <h2>Herramientas utilizadas</h2>
-
-            <ul class="list-group">
-                <li class="list-group-item">Bugzilla</li>
-                <li class="list-group-item">Software de monitoreo</li>
-                <li class="list-group-item">Registros de incidencias</li>
-                <li class="list-group-item">Planes contingenciales</li>
-            </ul>
-
-        </section>
-
-        <!-- IMPORTANCIA -->
-        <section id="importancia" class="container section-box">
-
-            <h2>Importancia</h2>
+            <h2>
+                <i class="bi bi-shield-lock"></i>
+                Seguridad informática
+            </h2>
 
             <p>
-                Garantiza la continuidad operativa, mejora la seguridad
-                y reduce riesgos de pérdida de información.
+                La seguridad informática protege los sistemas frente a ataques,
+                pérdida de información y accesos no autorizados mediante
+                políticas, herramientas y monitoreo constante.
             </p>
 
         </section>
 
-        <!-- FOOTER -->
-        <footer class="text-center mt-5">
+        <!-- ========================================= -->
+        <!-- IMPORTANCIA -->
+        <!-- Explica la importancia del mantenimiento -->
+        <!-- ========================================= -->
+        <section id="importancia" class="container section-box" data-aos="fade-up">
+
+            <h2>
+                <i class="bi bi-graph-up-arrow"></i>
+                Importancia del mantenimiento
+            </h2>
 
             <p>
-                Proyecto Académico | 2026
+                Garantiza la continuidad operativa, mejora la productividad,
+                aumenta la seguridad y reduce fallos críticos en los sistemas.
+            </p>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- FOOTER -->
+        <!-- Pie de página -->
+        <!-- ========================================= -->
+        <footer class="text-center mt-5 mb-4">
+
+            <p>
+                Proyecto Académico | Desarrollo Web 2026
             </p>
 
         </footer>
 
     </main>
 
-    <!-- ===== JAVASCRIPT ===== -->
+    <!-- ========================================= -->
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <!-- ========================================= -->
+    <button id="topBtn">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- AOS SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
     <script>
 
-        // Obtiene los elementos
+        // Inicializa animaciones
+        AOS.init();
+
+        // ELEMENTOS
         const menuBtn = document.getElementById("menuBtn");
         const sidebar = document.getElementById("sidebar");
         const content = document.getElementById("content");
+        const darkBtn = document.getElementById("darkBtn");
+        const topBtn = document.getElementById("topBtn");
 
-        // Evento para ocultar/mostrar menú
+        // ABRIR Y CERRAR MENÚ
         menuBtn.addEventListener("click", () => {
 
             sidebar.classList.toggle("active");
             content.classList.toggle("active");
+
+        });
+
+        // DARK MODE
+        darkBtn.addEventListener("click", () => {
+
+            document.body.classList.toggle("dark-mode");
+
+        });
+
+        // MOSTRAR BOTÓN ARRIBA
+        window.onscroll = () => {
+
+            if (document.documentElement.scrollTop > 300) {
+
+                topBtn.style.display = "block";
+
+            } else {
+
+                topBtn.style.display = "none";
+
+            }
+
+        };
+
+        // VOLVER ARRIBA
+        topBtn.addEventListener("click", () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
 
         });
 
