@@ -1,0 +1,48 @@
+/* ===== CONFIGURACIÓN GENERAL ===== */
+body {
+    font-family: Arial, sans-serif; /* Tipo de letra */
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+nav {
+    background-color: #333; /* Color oscuro */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none; /* Quita viñetas */
+    display: flex; /* Pone el menú en horizontal */
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ===== SECCIONES ===== */
+section {
+    padding: 40px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* ===== TÍTULOS ===== */
+h1, h2 {
+    color: #333;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
